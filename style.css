@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #403B4A;
+    background: -webkit-linear-gradient(to right, #E7E9BB, #403B4A);
+    background: linear-gradient(to right, #E7E9BB, #403B4A);
+
+}
+
+
+#myBtn {
+
+    border: solid 1px transparent;
+    border-radius: 4px;
+    padding: 0.5em 1em;
+    color: #ffffff;
+    background-color: #9555af;
+    width: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#buttonFlex{
+    display: flex;
+    flex-flow: row nowrap;
+    height: 100%;
+}
+
+#itemsStorageFlex{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    height: 100%;
+    width: 100%;
+}
+
+h2{
+    text-align: center;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content{
+    background-color: rgb(255, 255, 255);
+}
+
+.input{
+    padding: 10px;
+    display: block;
+    width: 100%;
+}
+.fields{
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    font-size: 13px;
+    padding: 6px 0 4px 10px;
+    border: 1px solid #0e0202;
+    border-radius: 8px;
+}
+#select{
+    width: 93%;
+}
+
+#selectEdit{
+    width: 93%;
+}
+
+select:invalid { color: grey; }
+
+.buttons{
+    text-align: right;
+}
+.edit{
+    background-color: #897bff;
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.add{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.cancel{
+    background-color: rgb(243, 65, 11);
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.listItems{
+    background-color: #7dbffe;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 20%;
+    border-radius: 20px;
+}
+
+.listItemsName{
+    font-size: 20px;
+    margin: 0px;
+    color: #000000;
+    font-weight: 700;
+}

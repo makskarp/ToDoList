@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js"async></script>
+</head>
+<body>
+
+<h2>To do list app</h2>
+
+<div id="buttonFlex">
+    <button id="myBtn">Add to List</button>
+</div>
+
+<!--<div class="listItems">-->
+<!--    <p class="listItemsName">name</p>-->
+<!--    <p class="listItemsDescription">desc</p>-->
+<!--    <p class="listItemsPriority">prio</p>-->
+<!--    <div class="listItemsButtons">-->
+<!--        <button type="button">Delete</button>-->
+<!--        <button type="button">Edit</button>-->
+<!--        <button type="button">Mark as done</button>-->
+<!--    </div>-->
+<!--</div>-->
+
+<div id="itemsStorageFlex">
+</div>
+
+<div id="myModal" class="modal">
+
+    <div class="modal-content">
+        <div class="header">
+            Add to do item
+            <span class="close">&times;</span>
+        </div>
+        <div class="main-сontent">
+            <form onsubmit="addInfoToLocalStorage()">
+                <div class="input-fields">
+                    <div class="input">
+                        <input type="text" id="name" size="60" class="fields" required pattern="[a-zA-Z0-9-, !.]+"
+                               placeholder=" Name *"
+                               minlength="1" maxlength="20">
+                    </div>
+                    <div class="input">
+                        <input type="text" id="description" size="60" class="fields"
+                               placeholder=" Description">
+                    </div>
+                    <div class="input">
+                        <select class="fields" id="select" required>
+                            <option disabled selected hidden value="" >Priority *</option>
+                            <option>Low</option>
+                            <option>Medium</option>
+                            <option>High</option>
+                        </select>
+                    </div>
+                    <div class="input">
+                        <input type="text" id="deadline" size="60" class="fields"
+                               placeholder=" Deadline">
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button type="reset" value="Reset" class="cancel" onclick="span.onclick()">Cancel</button>
+                    <button type="submit" value="Submit" class="add" id="add">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<div id="myModalEdit" class="modal">
+
+    <div class="modal-content">
+        <div class="header">
+            Edit to do task
+            <span class="close">&times;</span>
+        </div>
+        <div class="main-сontent">
+            <form onsubmit="addInfoToLocalStorageEditMode()" id="indexToEdit">
+                <div class="input-fields">
+                    <div class="input">
+                        <input type="text" id="nameEdit" size="60" class="fields" required pattern="[a-zA-Z0-9-, !.]+"
+                               placeholder=" Name *"
+                               minlength="1" maxlength="20">
+                    </div>
+                    <div class="input">
+                        <input type="text" id="descriptionEdit" size="60" class="fields"
+                               placeholder=" Description">
+                    </div>
+                    <div class="input">
+                        <select class="fields" id="selectEdit" required>
+                            <option>Low</option>
+                            <option>Medium</option>
+                            <option>High</option>
+                        </select>
+                    </div>
+                    <div class="input">
+                        <input type="datetime-local" id="deadlineEdit" size="60" class="fields"
+                               placeholder=" Deadline">
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button type="reset" value="Reset" class="cancel" onclick="spanEdit.onclick()">Cancel</button>
+                    <button type="submit" value="Submit" class="edit" id="edit">Edit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
